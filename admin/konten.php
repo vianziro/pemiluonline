@@ -20,6 +20,7 @@ elseif ($module == 'pertanyaan'){
 elseif ($module == 'user'){
 	include "modul/mod_user/user.php";
 }
+
 else{
 	include "modul/mod_home/home.php";
 }

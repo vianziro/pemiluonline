@@ -18,9 +18,7 @@
             <?php } ?>
 			
             <?php if ($_GET['sub']=='laporan'){ ?>
-            <li class="active">
-                 <a href="master.php?module=hasil&sub=laporan">Laporan</a>
-            </li>
+            
             <?php } ?>
         </ol>
     </div>
@@ -28,7 +26,7 @@
 <nav class="navbar navbar-inverse" >
 	<ul class="nav navbar-nav">
 		<li class="<?php if($_GET['sub']=='all'){echo'active';} ?>"><a href="?module=hasil&sub=all">Grafik Hasil Pemilu</a></li>
-		<li class="<?php if($_GET['sub']=='laporan'){echo'active';} ?>"><a href="?module=hasil&sub=laporan">Laporan</a></li>
+		
 	</ul>
 </nav>
 <?php if ($_GET['sub']=='all'){ ?>

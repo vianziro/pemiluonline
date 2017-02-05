@@ -20,7 +20,7 @@ switch($_GET[act]){
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 
-			<div class="panel-title"><span class="glyphicon glyphicon-question-sign"></span> Kelola Pertanyaan<i style="margin-left:700px;"><?php if($_SESSION['level']=="Super"){?><button class="btn btn-success btn-sm " onclick="window.location.href='?module=pertanyaan&act=tanyajawab'"><span class="glyphicon glyphicon-plus"></span> Tanya Jawab</button></i><?php } ?>
+			<div class="panel-title"><span class="glyphicon glyphicon-question-sign"></span> Kelola Pertanyaan
 			</div>
 		</div>
 		<div class="panel-body">
@@ -88,6 +88,9 @@ switch($_GET[act]){
 			</div>
 			<?php echo "<ul class='pagination'>$linkHalaman </ul>"; ?>
 		</div>
+		<div class="panel-footer">
+			<i ><?php if($_SESSION['level']=="Super"){?><button class="btn btn-success btn-sm " onclick="window.location.href='?module=pertanyaan&act=tanyajawab'"><span class="glyphicon glyphicon-plus"></span> Tanya Jawab</button></i><?php } ?>
+		</div>
 	</div>
 
 
@@ -112,7 +115,7 @@ switch($_GET[act]){
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 
-			<div class="panel-title"><span class="glyphicon glyphicon-question-sign"></span> Tanya Jawab<i style="margin-left:700px;"><?php if($_SESSION['level']=="Super"){?><button class="btn btn-success btn-sm " onclick="window.location.href='?module=pertanyaan&act=tanyajawab'"><span class="glyphicon glyphicon-plus"></span> Tanya Jawab</button></i><?php } ?>
+			<div class="panel-title"><span class="glyphicon glyphicon-question-sign"></span> Tanya Jawab
 			</div>
 		</div>
 		<div class="panel-body">
@@ -124,7 +127,7 @@ switch($_GET[act]){
 				<div class="panel panel-info">
 					<div class="panel-heading">
 						<div class="panel-title">
-							Pertanyaan Untuk No Urut <?php echo $tampil[no_urut] ?>
+							Pertanyaan Untuk No Urut <?php echo $tampil[no_urut]; ?>
 						</div>
 					</div>
 					<div class="panel-body">
@@ -133,7 +136,7 @@ switch($_GET[act]){
 						{
 							echo "Silahkan Generate Pertanyaan Telebih dahulu";
 							?>
-							<a href="?module=pertanyaan&act=tanyajawab&gen=q&id=<?php echo $tampil[no_urut]?>"><button class="btn btn-primary">Generate</button></a>
+							<a href="?module=pertanyaan&act=tanyajawab&gen=q&id=<?php echo $tampil[no_urut]; ?>"><button class="btn btn-primary">Generate</button></a>
 							<?php 
 						}
 						else
@@ -142,7 +145,7 @@ switch($_GET[act]){
 							{
 								echo "Silahkan Generate Pertanyaan Telebih dahulu";
 								?>
-								<a href="?module=pertanyaan&act=tanyajawab&gen=q&id=<?php echo $tampil[no_urut]?>"><button class="btn btn-primary">Generate</button></a>
+								<a href="?module=pertanyaan&act=tanyajawab&gen=q&id=<?php echo $tampil[no_urut]; ?>"><button class="btn btn-primary">Generate</button></a>
 								<?php 
 
 							}
@@ -170,6 +173,9 @@ switch($_GET[act]){
 		?>
 				
 		
+		</div>
+		<div class="panel-footer">
+			<i><?php if($_SESSION['level']=="Super"){?><button class="btn btn-success btn-sm " onclick="window.location.href='?module=pertanyaan'"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</button></i><?php } ?>
 		</div>
 	</div>
 

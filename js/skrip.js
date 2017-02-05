@@ -151,3 +151,20 @@ function inputask()
 		});
 	}
 }
+function cetakkartu(id)
+{
+    var content=document.getElementById('area-cetak').innerHTML;
+    var converted = htmlDocx.asBlob(content, {orientation: 'potrait', margins: 
+
+        {
+            top: 720,
+            bottom: 720,
+            left :400,
+            right:400,
+
+        }
+
+
+    });
+    saveAs(converted, 'Cetak Kartu.docx');
+}

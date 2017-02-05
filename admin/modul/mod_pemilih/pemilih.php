@@ -20,7 +20,7 @@ switch($_GET[act]){
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 
-			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Kelola Pemilih<i style="margin-left:610px;"><?php if($_SESSION['level']=="Super"){?> <button class="btn btn-success btn-sm " onclick="window.location.href='?module=pemilih&act=tambahpemilih'"><span class="glyphicon glyphicon-plus"></span> Tambah Pemilih </button></i> <button class="btn btn-info btn-sm " onclick="window.location.href='?module=pemilih&act=tambahpemilih'"><span class="glyphicon glyphicon-print"></span> Cetak Semua Kartu </button></i> <?php }?></div>
+			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Kelola Pemilih</div>
 		</div>
 		<div class="panel-body">
 			<table id="tablekonten" class="table table-striped table-bordered table-responsive" style="">
@@ -94,6 +94,9 @@ switch($_GET[act]){
 			</div>
 			<?php echo "<ul class='pagination'>$linkHalaman </ul>"; ?>
 		</div>
+		<div class="panel-footer">
+			<i ><?php if($_SESSION['level']=="Super"){?> <button class="btn btn-success btn-sm " onclick="window.location.href='?module=pemilih&act=tambahpemilih'"><span class="glyphicon glyphicon-plus"></span> Tambah Pemilih </button></i> <a target="_blank" href='modul/cetakkartu.php'><button class="btn btn-info btn-sm "><span class="glyphicon glyphicon-print"></span> Cetak Semua Kartu </button> </a></i> <?php }?>
+		</div>
 	</div>
 
 
@@ -117,7 +120,7 @@ switch($_GET[act]){
 	</div>
 	<div class="panel panel-primary">
     	<div class="panel-heading">
-			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Tambah Pemilih <i style="margin-left:770px;"><button class="btn btn-success btn-sm " onclick="window.location.href='?module=pemilih'"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</button></i></div>
+			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Tambah Pemilih </div>
 		</div>
 		<div class="panel-body">
 			<form method="POST" action="<?php echo $aksi;?>?module=pemilih&act=input"  class="form-horizontal" >
@@ -181,6 +184,9 @@ switch($_GET[act]){
 					
 				</div>
 			</form>
+		</div>
+		<div class="panel-footer">
+			<i><button class="btn btn-success btn-sm " onclick="window.location.href='?module=pemilih'"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</button></i>
 		</div>
     </div>
 	<?php

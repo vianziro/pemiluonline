@@ -41,7 +41,7 @@ if ($_SESSION[level] == 'Super'){
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 
-				<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Daftar User <i style="margin-left:820px;"><button class="btn btn-success btn-sm " onclick="window.location.href='?module=user&act=tambahuser'"><span class="glyphicon glyphicon-plus"></span> Tambah User</button></i></div>
+				<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Daftar User <i></i></div>
 			</div>
 			<div class="panel-body">
 				<table id="tablekonten" class="table table-striped table-bordered table-responsive" style="">
@@ -73,6 +73,9 @@ if ($_SESSION[level] == 'Super'){
 					</tbody>
 				</table>
 			</div>
+			<div class="panel-footer">
+				<button class="btn btn-success btn-sm " onclick="window.location.href='?module=user&act=tambahuser'"><span class="glyphicon glyphicon-plus"></span> Tambah User</button>
+			</div>
 		</div>
 		<?php
 	break;
@@ -94,7 +97,7 @@ if ($_SESSION[level] == 'Super'){
 	</div>
 	<div class="panel panel-primary">
     	<div class="panel-heading">
-			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Tambah User <i style="margin-left:830px;"><button class="btn btn-success btn-sm " onclick="window.location.href='?module=user'"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</button></i></div>
+			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Tambah User </div>
 		</div>
 		<div class="panel-body">
 			<form method="POST" action="<?php echo $aksi;?>?module=user&act=input" onSubmit="return validasi(this)" class="form-horizontal" >
@@ -167,6 +170,9 @@ if ($_SESSION[level] == 'Super'){
 					<i><font size="1">Super admin mengizinkan untuk mengakses modul User sedangkan admin biasa tidak dapat mengakses modul user</font>	</i>
 				</blockquote>
 			</form>
+		</div>
+		<div class="panel-footer">
+			<i ><button class="btn btn-success btn-sm " onclick="window.location.href='?module=user'"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</button></i>
 		</div>
     </div>
 	<?php

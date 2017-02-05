@@ -30,7 +30,7 @@ switch($_GET[act]){
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 
-			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Calon Ketua dan Wakil Ketua <i style="margin-left:600px;"><?php if($_SESSION['level']=="Super"){?><button class="btn btn-success btn-sm " onclick="window.location.href='?module=calon&act=tambahcalon'"><span class="glyphicon glyphicon-plus"></span> Tambah Calon</button></i><?php } ?></div>
+			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Calon Ketua dan Wakil Ketua </div>
 		</div>
 		<div class="panel-body">
 			<table id="tablekonten" class="table table-striped table-bordered table-responsive" style="">
@@ -57,7 +57,7 @@ switch($_GET[act]){
 								<td align="center"><div id="kontentd"><?php echo $data['no_urut'];?></div></td>
 								<td align="center"><div id="kontentd"><img height="200px" width="140px" src="../foto_calon/<?php echo $data[foto_ketua];  ?>"><br /><?php echo $data['c_ketua'];?></div> </td>
 								<td align="center"><div id="kontentd"><img height="200px" width="140px" src="../foto_calon/<?php echo $data[foto_wakil];  ?>"><br /><?php echo $data['cw_ketua'];?></div> </td>
-								<td><?php if($_SESSION['level']=="Super"){?><div id="kontentd"><a href="?module=calon&act=editcalon&id=<?php echo $data['no_urut'];?>"><button class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-wrench"></span> Edit</button></a> | <a href="<?php echo $aksi;?>?module=calon&act=hapus&id=<?php echo $data['no_urut'];?>"><button class="btn btn-danger btn-sm" onclick="return confirm('Hapus calon?')" ><span class="glyphicon glyphicon-trash"></span> Hapus</button></a> | <a href="<?php echo $aksi;?>?module=calon&act=detil&id=<?php echo $data['no_urut'];?>"><button class="btn btn-info btn-sm" onclick="return confirm('Lihat Detil calon?')" ><span class="glyphicon glyphicon-user"></span> Detail</button></a></div> </div><?php } ?>
+								<td><?php if($_SESSION['level']=="Super"){?><div id="kontentd"><a href="?module=calon&act=editcalon&id=<?php echo $data['no_urut'];?>"><button class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-wrench"></span> Edit</button></a> | <a href="<?php echo $aksi;?>?module=calon&act=hapus&id=<?php echo $data['no_urut'];?>"><button class="btn btn-danger btn-sm" onclick="return confirm('Hapus calon?')" ><span class="glyphicon glyphicon-trash"></span> Hapus</button></a></div> </div><?php } ?>
 								</td>
 							</tr>
 
@@ -81,6 +81,9 @@ switch($_GET[act]){
 			
 			
 		</div>
+		<div class="panel-footer">
+			<i><?php if($_SESSION['level']=="Super"){?><button class="btn btn-success btn-sm " onclick="window.location.href='?module=calon&act=tambahcalon'"><span class="glyphicon glyphicon-plus"></span> Tambah Calon</button></i><?php } ?>
+		</div>
 	</div>
 
 	<?php
@@ -103,7 +106,7 @@ switch($_GET[act]){
 	</div>
 	<div class="panel panel-primary">
     	<div class="panel-heading">
-			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Calon Ketua dan Wakil <i style="margin-left:770px;"><button class="btn btn-success btn-sm " onclick="window.location.href='?module=calon'"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</button></i></div>
+			<div class="panel-title"><span class="glyphicon glyphicon-list"></span> Calon Ketua dan Wakil </div>
 		</div>
 		<div class="panel-body">
 			<form method="POST" enctype="multipart/form-data" action="<?php echo $aksi;?>?module=calon&act=input" onSubmit="return validasi(this)" class="form-horizontal" >
@@ -170,6 +173,9 @@ switch($_GET[act]){
 					
 				</div>
 			</form>
+		</div>
+		<div class="panel-footer">
+			<i><button class="btn btn-success btn-sm " onclick="window.location.href='?module=calon'"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</button></i>
 		</div>
     </div>
 	<?php
